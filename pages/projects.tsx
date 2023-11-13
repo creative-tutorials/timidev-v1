@@ -53,9 +53,9 @@ export default function Projects() {
       </Head>
       <main>
         <Header />
-        <section className="md:p-8 md:px-32 lg:p-8 lg:px-32 p-4 px-4 flex flex-col mt-14">
+        <section className="md:p-8 md:px-32 lg:p-8 lg:px-32 p-4 px-4 flex flex-col mt-20">
           <hgroup className="flex flex-col gap-4 text-slate-400">
-            <h2 className="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#998dd2] to-[#9f9be4]">
+            <h2 className="text-5xl whitespace-nowrap overflow-hidden font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#998dd2] to-[#9f9be4]">
               Work. Work. Work
             </h2>
             <p>

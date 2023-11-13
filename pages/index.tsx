@@ -1,13 +1,36 @@
 import Image from "next/image";
 import Header from "@/components/app/Header";
-import { Linkedin, Github } from "lucide-react";
+import { Linkedin, Github, Mail, Twitter } from "lucide-react";
+import { useState, useEffect, useCallback } from "react";
 import { Inter } from "next/font/google";
 import Head from "next/head";
 import Link from "next/link";
+import { isBrowser, isMobile } from "react-device-detect";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
+  const [isMobileUse, setIsMobileUse] = useState(false);
+  const [counter, setCounter] = useState(0);
+
+  useEffect(() => {
+    setCounter((prev) => prev + 1);
+
+    counter === 1 && checkMobileUse();
+
+    return () => {
+      setCounter(0);
+    };
+  }, [counter]);
+
+  async function checkMobileUse() {
+    if (isMobile) {
+      setIsMobileUse(true);
+    } else {
+      setIsMobileUse(false);
+    }
+  }
+
   return (
     <>
       <Head>
@@ -58,19 +81,19 @@ export default function Home() {
       </Head>
       <main>
         <Header />
-        <section className="md:p-8 md:px-32 lg:p-8 lg:px-32 p-4 px-4 flex mt-24">
+        <section className="md:p-8 md:px-32 lg:p-8 lg:px-32 p-4 px-4 flex items-center mt-20 min-h-screen">
           <div className="flex flex-col gap-4" id="group">
             <hgroup className="flex flex-col gap-4">
-              <h1 className="text-6xl text-white font-semibold leading-[5rem] ">
-                Hi! I&apos;m Timi, a full stack{" "}
-                <span className="bg-slate-700 rounded">developer.</span>
+              <h1 className="md:text-6xl lg:text-6xl text-5xl text-white font-semibold leading-[3.4rem]">
+                Hi! I&apos;m Timi, a full stack <br />
+                <span className="rounded">developer.</span>
               </h1>
               <p className="text-white">
                 I currently love building projects and exploring new
                 technologies.{" "}
               </p>
               <p className="text-white">
-                I&apos;m currently a student at{" "}
+                I am currently enrolled as a student at{" "}
                 <Link
                   href="https://miva.university/"
                   target="_blank"
@@ -78,33 +101,107 @@ export default function Home() {
                 >
                   Miva University
                 </Link>
-                . Before I entered Uni, I&apos;ve ventured into tech at the age
-                of <span className="italic">12</span>, at that age I was
-                building websites for myself, friends and family.
+                . Prior to attending Uni, I began my journey in the technology
+                field at the age of 12, <br /> building websites for myself,
+                friends, and family.
               </p>
               <p className="text-white">
-                Through my experience, I had the opportunity to work with other
-                developers on both large and small projects.
+                During my experience, I have worked on projects both large and
+                small alongside other developers.
               </p>
             </hgroup>
-            <div id="links" className="flex items-center gap-4">
+            <div
+              id="links"
+              className="flex md:flex-row lg:flex-row flex-col md:items-center lg:items-center items-start gap-4"
+            >
               <Link
                 href="https://www.linkedin.com/in/treasure-alekhojie/"
                 target="_blank"
-                className="flex items-center gap-2 bg-slate-700 transition-all hover:bg-slate-800 p-3 px-10 text-white rounded"
+                className="flex items-center md:justify-start lg:justify-start justify-center gap-2 md:w-auto lg:w-auto w-full bg-slate-700 transition-all hover:bg-slate-800 p-3 px-10 text-white rounded"
               >
                 LikedIn <Linkedin />
               </Link>
               <Link
                 href="https://github.com/creative-tutorials"
                 target="_blank"
-                className="flex items-center gap-2 bg-transparent border border-slate-700 transition-all hover:bg-slate-700 p-3 px-10 text-white rounded"
+                className="flex items-center md:justify-start lg:justify-start justify-center gap-2 md:w-auto lg:w-auto w-full bg-transparent border border-slate-700 transition-all hover:bg-slate-700 p-3 px-10 text-white rounded"
               >
                 GitHub <Github />
               </Link>
             </div>
           </div>
         </section>
+        <footer className="w-full">
+          {isMobileUse ? (
+            <div
+              id="links"
+              className="flex items-center justify-center gap-8 p-4"
+            >
+              <Link
+                href="mailto:hellotimi@proton.me"
+                target="_blank"
+                className="x text-white"
+              >
+                <Mail />
+              </Link>
+              <Link
+                href="https://twitter.com/timi_networks"
+                target="_blank"
+                className="x text-white"
+              >
+                <Twitter />
+              </Link>
+              <Link
+                href="https://github.com/creative-tutorials"
+                target="_blank"
+                className="x text-white"
+              >
+                <Github />
+              </Link>
+              <Link
+                href="https://www.linkedin.com/in/treasure-alekhojie/"
+                target="_blank"
+                className="x text-white"
+              >
+                <Linkedin />
+              </Link>
+            </div>
+          ) : (
+            <div
+              id="links"
+              className="flex items-center justify-center gap-8 p-4"
+            >
+              <Link
+                href="mailto:hellotimi@proton.me"
+                target="_blank"
+                className="x text-slate-400 hover:text-white"
+              >
+                email
+              </Link>
+              <Link
+                href="https://twitter.com/timi_networks"
+                target="_blank"
+                className="x text-slate-400 hover:text-white"
+              >
+                twitter
+              </Link>
+              <Link
+                href="https://github.com/creative-tutorials"
+                target="_blank"
+                className="x text-slate-400 hover:text-white"
+              >
+                github
+              </Link>
+              <Link
+                href="https://www.linkedin.com/in/treasure-alekhojie/"
+                target="_blank"
+                className="x text-slate-400 hover:text-white"
+              >
+                linkedin
+              </Link>
+            </div>
+          )}
+        </footer>
       </main>
     </>
   );

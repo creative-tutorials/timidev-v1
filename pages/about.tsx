@@ -54,9 +54,9 @@ export default function About() {
       </Head>
       <main>
         <Header />
-        <section className="md:p-8 md:px-32 lg:p-8 lg:px-32 p-4 px-4 flex flex-col mt-14 gap-8">
+        <section className="md:p-8 md:px-32 lg:p-8 lg:px-32 p-4 px-4 flex flex-col mt-20 gap-8">
           <h2 className="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#998dd2] to-[#9f9be4]">
-            Create. Deploy. Optimize
+            Create. Deploy. Optimize.
           </h2>
           <div className="flex md:flex-row lg:flex-row flex-col gap-4">
             <Image
@@ -68,31 +68,27 @@ export default function About() {
             />
             <hgroup className="flex flex-col gap-4">
               <p className="text-slate-400">
-                <span className="text-white font-medium">
-                  Hey There, I&apos;m Timi Alekhojie
-                </span>{" "}
-                I&apos;m a full stack developer, I work with Next.js.
+                <span className="text-white font-medium">Hello, my name is Timi Alekhojie</span>. I am a full-stack
+                developer specializing in working with Next.js.
               </p>
               <p className="text-slate-400">
-                With my skills I&apos;ve worked on complex and simple projects,
-                I enjoy the feeling of building applications, because it teaches
-                me the art of problem solving, been able to sit down and solve
-                problems is what made me love programming.
+                Through my skills, I have worked on both complex and simple
+                projects. I enjoy the process of building applications because
+                it teaches me the art of problem-solving, and the ability to sit
+                down and solve problems made me fall in love with programming.
               </p>
               <p className="text-slate-400">
+                I enjoy contributing to open-source and pursuing side projects,
+                while also{" "}
                 <span className="text-white font-medium">
-                  I love working on open source and side projects
+                  pursuing my passion for music
                 </span>
-                . When I&apos;m not working{" "}
-                <span className="text-white font-medium">
-                  I love making music
-                </span>
-                . I also love working with other developers, the feeling of
-                teamwork drives me to do more.
+                . Collaborating with fellow developers motivates me to do my
+                best.
               </p>
               <p className="text-slate-400">
-                I also teach programming to young kids and adults, I help them
-                understand every stage in programming.
+                I teach programming to kids and adults, guiding them through
+                every stage.
               </p>
             </hgroup>
           </div>
@@ -104,7 +100,31 @@ export default function About() {
             <p className="text-slate-400">
               Do you have job opportunity or idea you&apos;d like to discuss?
               Feel free to reach me at info.techtimi@gmail.com. You <br /> can
-              also find me on <Link href='https://twitter.com/timi_networks' target="_blank" className="text-[#939df2]">Twitter</Link>, <Link href='https://github.com/creative-tutorials' target="_blank" className="text-[#939df2]">GitHub</Link> and <Link href='https://www.linkedin.com/in/treasure-alekhojie/' target="_blank" className="text-[#939df2]">LinkedIn</Link>.
+              also find me on{" "}
+              <Link
+                href="https://twitter.com/timi_networks"
+                target="_blank"
+                className="text-[#939df2]"
+              >
+                Twitter
+              </Link>
+              ,{" "}
+              <Link
+                href="https://github.com/creative-tutorials"
+                target="_blank"
+                className="text-[#939df2]"
+              >
+                GitHub
+              </Link>{" "}
+              and{" "}
+              <Link
+                href="https://www.linkedin.com/in/treasure-alekhojie/"
+                target="_blank"
+                className="text-[#939df2]"
+              >
+                LinkedIn
+              </Link>
+              .
             </p>
           </hgroup>
         </section>
