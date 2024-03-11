@@ -20,6 +20,28 @@
   }
 }
 
+* {
+  scroll-behavior: smooth;
+  scroll-margin: 5rem;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #64748b;
+  border-radius: 2px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #475569;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #050505;
+}
+
 body {
   background: #050505;
   font-family: var(--font-signika);

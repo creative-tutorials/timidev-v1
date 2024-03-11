@@ -124,7 +124,10 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section className="md:p-6 mt-28 lg:p-6 md:px-32 lg:px-32 p-4 px-4">
+        <section
+          id="projects"
+          className="md:p-6 mt-28 lg:p-6 md:px-32 lg:px-32 p-4 px-4"
+        >
           <hgroup className="text-center">
             <h2 className="md:text-6xl lg:text-6xl text-5xl uppercase">
               Featured{" "}
@@ -256,7 +259,10 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section className="md:p-6 mt-28 lg:p-6 md:px-32 lg:px-32 p-4 px-4">
+        <section
+          id="services"
+          className="md:p-6 mt-28 lg:p-6 md:px-32 lg:px-32 p-4 px-4"
+        >
           <hgroup className="flex items-center justify-center text-center flex-col gap-3">
             <p className="md:text-2xl lg:text-2xl text-xl tracking-widest uppercase text-transparent bg-clip-text bg-gradient-to-br from-indigo-500 to-pink-500">
               Services
@@ -333,7 +339,10 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section className="md:p-6 mt-28 lg:p-6 md:px-32 lg:px-32 p-4 px-4">
+        <section
+          id="skills"
+          className="md:p-6 mt-28 lg:p-6 md:px-32 lg:px-32 p-4 px-4"
+        >
           <hgroup>
             <h3 className="md:text-6xl lg:text-6xl text-4xl uppercase">
               Skills
