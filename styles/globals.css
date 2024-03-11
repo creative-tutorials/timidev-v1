@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Signika+Negative:wght@300..700&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -6,6 +7,7 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: #000814;
   --background-end-rgb: #000814;
+  --font-signika: "Signika Negative", sans-serif;
   color-scheme: dark;
 }
 
@@ -14,10 +16,11 @@
     --foreground-rgb: 255, 255, 255;
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0;
+    --font-signika: "Signika Negative", sans-serif;
   }
 }
 
 body {
-  /* color: rgb(var(--foreground-rgb)); */
-  background: #07090c;
+  background: #050505;
+  font-family: var(--font-signika);
 }

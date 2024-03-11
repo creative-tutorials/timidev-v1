@@ -51,6 +51,9 @@ module.exports = {
           foreground: "hsl(var(--card-foreground))",
         },
       },
+      fontFamily: {
+        Signika: ['"Signika Negative", sans-serif'],
+      },
       borderRadius: {
         none: "0",
         sm: "0.125rem",
