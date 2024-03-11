@@ -143,7 +143,7 @@ export default function Home() {
             >
               <div id="image" className="w-full h-full p-8">
                 <Image
-                  src="/orgs.png"
+                  src="/project/orgs.png"
                   width={600}
                   height={600}
                   alt="StashBlob Image"
@@ -174,7 +174,7 @@ export default function Home() {
             >
               <div id="image" className="w-full h-full p-8">
                 <Image
-                  src="/expi.png"
+                  src="/project/expiv2.png"
                   width={600}
                   height={600}
                   alt="Expi Image"
@@ -202,7 +202,12 @@ export default function Home() {
               className="flex md:flex-row lg:flex-row flex-col items-center justify-between"
             >
               <div id="image" className="w-full h-full p-8">
-                <Image src="/magic.png" width={600} height={600} alt="Magic" />
+                <Image
+                  src="/project/magic_v2.png"
+                  width={600}
+                  height={600}
+                  alt="Magic"
+                />
               </div>
               <div id="content" className="flex flex-col gap-4">
                 <hgroup className="flex flex-col gap-3">
@@ -227,7 +232,7 @@ export default function Home() {
             >
               <div id="image" className="w-full h-full p-8">
                 <Image
-                  src="/resubase.png"
+                  src="/project/resubase_v2.png"
                   width={600}
                   height={600}
                   alt="Resubase Image"
