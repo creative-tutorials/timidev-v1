@@ -143,7 +143,7 @@ export default function Home() {
             >
               <div id="image" className="w-full h-full p-8">
                 <Image
-                  src="/File Organize v2.png"
+                  src="/orgs.png"
                   width={600}
                   height={600}
                   alt="StashBlob Image"
